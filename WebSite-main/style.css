@@ -1,0 +1,1042 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#051f30, #000000);
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    transition: all 0.3s ease;
+    scrollbar-width: none;
+    overflow: hidden scroll;
+    background: #ffffff12;
+    -ms-overflow-style: none;
+    padding: 20px 20px 20px 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 8px 0px 9px 0px #00000014;
+    z-index: 1000;
+}
+
+.menu:hover {
+    width: 260px;
+}
+
+/* Efecto difuminado para los botones al desplegar */
+.menu:hover .material-symbols-outlined {
+    opacity: 0.5;
+    transition: opacity 0.3s 0.2s;
+}
+
+.menu-content li {
+    list-style: none;
+    border-radius: 0px 50px 50px 0;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.menu-content li:hover {
+    background: #0c0c0c;
+}
+
+.menu-content li span:nth-child(2) {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu:hover li span:nth-child(2) {
+    display: block;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(213, 213, 213);
+    display: flex;
+    align-items: center;
+    font-family: 'calibri';
+    transition: opacity 0.3s;
+}
+
+.material-symbols-outlined {
+    padding: 10px;
+    font-size: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #0c0c0c;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+/* Efecto de transición coordinado */
+.menu:hover .menu-content li {
+    transition-delay: 0.1s;
+}
+
+.menu:hover .material-symbols-outlined {
+    transition-delay: 0s;
+}
+/* Hacer que el contenido sea responsivo */
+@media (max-width: 768px) {
+    .menu {
+        width: 200px;
+    }
+
+    section {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        width: 100px;
+    }
+
+    .menu-content span {
+        display: none; /* Esconde el texto y deja solo los iconos */
+    }
+
+    section {
+        margin-left: 100px;
+        width: calc(100% - 100px);
+    }
+}
+
+/*home*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #f8f9fa;
+}
+
+.home {
+    margin-left: 100px;
+    width: calc(100% - 100px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.home-content {
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Tipografía */
+.home h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.home h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: #34495e;
+}
+
+.home p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #0077cc;
+    font-weight: 600;
+}
+
+/* Lista */
+.home-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.home-content li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.home-content li strong {
+    margin-right: 0.5rem;
+}
+
+/* CTA */
+.cta-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .home {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+    }
+    
+    .home-content {
+        padding: 30px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem;
+        min-height: auto;
+    }
+    
+    .home-content {
+        padding: 20px;
+        height: auto;
+        margin: 20px 0;
+    }
+    
+    .home h1 {
+        font-size: 1.75rem;
+    }
+    
+    .home h2 {
+        font-size: 1.25rem;
+    }
+    
+    .home-content li {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .home h1 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-text {
+        font-size: 1rem;
+    }
+    
+    .home-content li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos generales para la sección Tareas */
+.tareas {
+    background: rgba(0, 100, 200, 0.2);
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin: 1.25rem auto; 
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+#tareas9.section-content{
+
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 120 px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.tareas h2 {
+    color: #00aaff;
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.2;
+}
+
+.tareas p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+}
+
+/* Estilos para el botón interactivo */
+.button {
+    display: inline-flex;
+    text-decoration: none;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    justify-content: center;
+    gap: 0.2rem;
+
+}
+
+.box {
+    width: 2.1875rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.8s;
+    position: relative;
+    background: rgb(58, 165, 253);
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.box::before {
+    content: "C";
+    position: absolute;
+    top: 0;
+    background: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.4s;
+}
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 165, 253, 0.3);
+}
+
+/* Configuración de letras individuales */
+.box:nth-child(1)::before { content: 'D'; }
+.box:nth-child(2)::before { content: 'O'; transform: translateY(-100%); }
+.box:nth-child(3)::before { content: 'W'; }
+.box:nth-child(4)::before { content: 'N'; transform: translateY(-100%); }
+.box:nth-child(5)::before { content: 'L'; }
+.box:nth-child(6)::before { content: 'O'; transform: translateY(-100%); }
+.box:nth-child(7)::before { content: 'A'; }
+.box:nth-child(8)::before { content: 'D'; transform: translateY(-100%); }
+
+.button:hover .box::before {
+    transform: translateY(0);
+}
+
+/* Media Queries para responsive */
+@media (max-width: 768px) {
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tareas {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        max-width: 600px;
+    }
+    
+    .tareas h2 {
+        font-size: 1.75rem;
+    }
+    
+    .tareas p {
+        font-size: 1rem;
+    }
+    
+    .button-content {
+        padding: 0.8rem;
+    }
+    
+    .box {
+        width: 2rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tareas {
+        padding: 1rem;
+        width: 95%;
+    }
+    
+    .tareas h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tareas p {
+        font-size: 0.9rem;
+    }
+    
+    .button {
+        gap: 0.2rem;
+    }
+    
+    .box {
+        width: 1.75rem;
+        height: 2.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tareas {
+        max-width: 1000px; /* Valor ajustado para mejor proporción */
+    }
+}
+
+/*Examnes*/
+.examenes {
+    background: rgba(200, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.examenes h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.examenes p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.5;
+}
+
+/* ✨ Etiqueta de cada examen */
+.acordeon-item {
+    cursor: pointer;
+    position: relative;
+    padding: 15px;
+    background: #a85959;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    
+}
+
+.acordeon-item:hover {
+    background: #ff9999;
+    
+}
+
+/* ➕ Estilo del signo "+" */
+.acordeon-item::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+/* 📝 Contenido de cada examen */
+.contenido {
+    background: white;
+    height: 0;
+    font-size: 1rem;
+    text-align: justify;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.5s ease, padding 0.5s ease;
+    padding: 0 15px;
+    color: #000000;
+}
+
+/* 🎯 Ajuste para los formularios */
+.contenido iframe {
+    width: 100%;
+    height: 0;
+    border: none;
+    transition: height 0.5s ease;
+    display: block;
+}
+
+/* 👇 Cuando el acordeón está abierto */
+.acordeon-item.active .contenido {
+    height: auto;
+    padding: 10px 15px;
+}
+
+/* 🔄 Mostrar el formulario cuando el acordeón está activo */
+.acordeon-item.active .contenido iframe {
+    height: 500px; /* Ajusta la altura según sea necesario */
+}
+
+/* 🔄 Cambia "+" a "-" cuando se expande */
+.acordeon-item.active::before {
+    content: '-';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+
+/* Tutoriales - Estilos base */
+.tutoriales {
+    background: rgba(0, 200, 100, 0.2);
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin: 1.25rem auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tutoriales h2 {
+    color: #00ff88;
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.2;
+}
+
+.tutoriales p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Botón Tutoriales - Estilos responsive */
+.button1 {
+    display: inline-flex;
+    justify-content: center;
+    gap: 0.3125rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    width: 2.5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.4s ease;
+    position: relative;
+    background: #037233;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.box1::before {
+    content: "C";
+    position: absolute;
+    top: 0;
+    background: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Configuración de letras individuales */
+.box1:nth-child(1)::before { content: 'C'; }
+.box1:nth-child(2)::before { content: 'L'; transform: translateY(-100%); }
+.box1:nth-child(3)::before { content: 'I'; }
+.box1:nth-child(4)::before { content: 'C'; transform: translateY(-100%); }
+.box1:nth-child(5)::before { content: 'K'; }
+.box1:nth-child(6)::before { content: '-'; transform: translateY(-100%); }
+.box1:nth-child(7)::before { content: '-'; }
+.box1:nth-child(8)::before { content: '-'; transform: translateY(-100%); }
+.box1:nth-child(9)::before { content: '>'; }
+.box1:nth-child(10)::before { content: ':D'; transform: translateY(-100%); }
+
+.button1:hover .box1::before {
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .tutoriales {
+        padding: 1.5rem;
+    }
+    
+    .tutoriales h2 {
+        font-size: 1.75rem;
+    }
+    
+    .tutoriales p {
+        font-size: 1rem;
+    }
+    
+    .box1 {
+        width: 2rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutoriales {
+        padding: 1rem;
+        width: 95%;
+    }
+    
+    .tutoriales h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tutoriales p {
+        font-size: 0.9rem;
+    }
+    
+    .button1 {
+        gap: 0.2rem;
+    }
+    
+    .box1 {
+        width: 1.75rem;
+        height: 2.25rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Ajuste para muchos elementos */
+    .box1:nth-child(n+7) {
+        margin-top: 0.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tutoriales {
+        max-width: 850px;
+    }
+    
+    .box1 {
+        width: 3rem;
+        height: 3.5rem;
+    }
+}
+
+
+
+/*Nosotros*/
+/* Estilos para la sección "Nosotros" */
+.nosotros {
+    background: rgba(150, 0, 150, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px; /* Aumentado para coincidir con el carrusel */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para alinear correctamente con el carrusel */
+}
+
+/* Títulos y párrafos dentro de "Nosotros" */
+.nosotros h2 {
+    color: #cc00cc;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.nosotros p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.5;
+}
+
+/* Estilos para el carrusel */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 40px auto;
+    background-color: #f5f5f5;
+    box-shadow: 0 0px 50px #dbdbdb;
+    padding: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Contenedor del slider */
+#slide {
+    width: max-content;
+    margin-top: 50px;
+}
+
+/* Configuración de las imágenes del carrusel */
+.item {
+    width: 200px;
+    height: 300px;
+    background-position: center;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+}
+
+/* Configuración de la imagen principal y las secundarias */
+.item:nth-child(1),
+.item:nth-child(2) {
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+}
+
+.item:nth-child(3) {
+    left: 50%;
+}
+
+.item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+
+.item:nth-child(5) {
+    left: calc(50% + 440px);
+}
+
+.item:nth-child(n+6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+/* Contenido dentro de las imágenes */
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    padding: 0;
+    color: #eee;
+    transform: translate(0, -50%);
+    display: none;
+    font-family: system-ui;
+}
+
+/* Muestra el contenido solo en la imagen principal */
+.item:nth-child(2) .content {
+    display: block;
+    z-index: 11111;
+}
+
+/* Estilos del texto y botón dentro del carrusel */
+.item .name {
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+}
+
+.item .des {
+    margin: 20px 0;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+}
+
+.item button {
+    padding: 10px 20px;
+    border: none;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+/* Animación de aparición del contenido */
+@keyframes showcontent {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+        filter: blur(0);
+    }
+}
+
+/* Botones del carrusel */
+.buttons {
+    position: absolute;
+    bottom: 30px;
+    z-index: 222222;
+    text-align: center;
+    width: 100%;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0.5s;
+}
+
+.buttons button:hover {
+    background-color: #bac383;
+}
+
+
+/*Contacto*/
+/* Variables globales */
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+/* Sección Contacto */
+.contacto {
+    background: rgba(255, 165, 0, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contacto h2 {
+    color: #ffaa00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.contacto p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.5;
+}
+
+/* Contenedor de tarjetas en una sola fila */
+.cards-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las tarjetas equitativamente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en pantallas pequeñas */
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Tarjeta */
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.225);
+    cursor: pointer;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Imagen de portada */
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Efecto hover en la tarjeta */
+.card:hover {
+    transform: scale(1.04);
+}
+
+/* Efecto hover: atenúa las demás tarjetas */
+.cards-container:hover .card:not(:hover) {
+    opacity: 0.4;
+}
+
+/* Wrapper */
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+/* Efecto de sombra en el hover */
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+
+/* Animaciones en el título */
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+/* Personaje */
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+
+
+
+/*.btn {
+    background: #0c0c0c;
+    color: rgb(213, 213, 213);
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #1a1a1a;
+}*/
